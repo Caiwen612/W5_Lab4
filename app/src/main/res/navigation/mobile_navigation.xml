@@ -11,26 +11,17 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_nav_home_to_nav_dividend"
-            app:destination="@id/nav_dividend"
-            app:popUpToInclusive="false" />
+            android:id="@+id/action_nav_home_to_investmentFragment"
+            app:destination="@id/investmentFragment"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
         <action
-            android:id="@+id/action_nav_home_to_nav_investment"
-            app:destination="@id/nav_investment"
-            app:popUpToInclusive="false" />
+            android:id="@+id/action_nav_home_to_dividendFragment"
+            app:destination="@id/dividendFragment"
+            app:popUpTo="@id/nav_home"
+            app:popUpToInclusive="true" />
     </fragment>
 
-    <fragment
-        android:id="@+id/nav_dividend"
-        android:name="my.edu.tarc.epf.ui.dividend.DividendFragment"
-        android:label="@string/menu_dividend"
-        tools:layout="@layout/fragment_dividend" />
-
-    <fragment
-        android:id="@+id/nav_investment"
-        android:name="my.edu.tarc.epf.ui.investment.InvestmentFragment"
-        android:label="@string/menu_investment"
-        tools:layout="@layout/fragment_investment" />
     <fragment
         android:id="@+id/nav_gallery"
         android:name="my.edu.tarc.epf.ui.gallery.GalleryFragment"
@@ -41,4 +32,14 @@
         android:name="my.edu.tarc.epf.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/dividendFragment"
+        android:name="my.edu.tarc.epf.ui.dividend.DividendFragment"
+        android:label="fragment_dividend"
+        tools:layout="@layout/fragment_dividend" />
+    <fragment
+        android:id="@+id/investmentFragment"
+        android:name="my.edu.tarc.epf.ui.investment.InvestmentFragment"
+        android:label="fragment_investment"
+        tools:layout="@layout/fragment_investment" />
 </navigation>
